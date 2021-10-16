@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Dot from "../assets/images/Group 2608.svg";
-import Phone from "../assets/images/9180212681582004495.svg";
-import {Link} from "react-router-dom";
+import Phone from "../assets/images/Layer 3.svg";
 
 export default function Login() {
     return (
@@ -12,18 +11,15 @@ export default function Login() {
                     <Dotted src={Dot} alt="image" />
              </Round>
              <H2>
-                Let's root togrther and watch others grow
+                Enter Password
              </H2>
-             <P>An inventive collaboration for smart dawn incling kids to match their vision</P>
+             <P>Enter your password to login</P>
              <Form>
-                 <Input type="number"  placeholder="Enter Phone Number" inputmode="numeric" required />
+                 <Input type="password"  placeholder="Enter Password" inputmode="numeric" required />
                  <Dial><Call src={Phone} alt="Icon" /></Dial>
-                 <P1>Forget Password?</P1>
-                 <Link to={`/pass`}>
-                    <Button type="submit" value="Continue" />
-                 </Link>
+                 <P1>Login with otp</P1>
+                    <Button type="submit" value="Submit" />
              </Form>
-             <P2>New to steyp? <Link to={`/singup`} > <Span>Create Account</Span> </Link></P2>
         </Div>
         </>
     )
@@ -47,7 +43,7 @@ const H2 = styled.h2 `
 const P = styled.p `
     color:#707070;
     font-size: 20px;
-    padding: 26px 0;
+    padding: 10px 0;
 `;
 const Form = styled.form `
     position:relative;
@@ -80,18 +76,6 @@ const Button = styled.input `
     border:none;
     color:#fff;
     border-radius:4px;
-}
-`;
-const P2 = styled.p `
-    text-align:center;
-    font-size: 18px;
-    font-weight: 600;
-    padding:10px;
-    color:#707070;
-`;
-const Span = styled.span `
-    color:blue;
-    cursor:pointer;
 `;
 const Call = styled.img `
     width:100%;

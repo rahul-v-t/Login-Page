@@ -4,8 +4,11 @@ import Logo from "../assets/images/steyp-logo.svg";
 import Mask from "../assets/images/mask.png";
 import Login from './Login';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import Otp from './Otp';
-
+import Singup from './Singup';
+import Name from './Name';
+import Referal from './Referal';
+import Pass from './Pass';
+import Create from './Create';
 
 export default function Main() {
     return (
@@ -21,7 +24,13 @@ export default function Main() {
                     <>
                     <Switch>
                         <Route path="/" exact component={Login} />
-                        <Route path="/otp" component={Otp} /> 
+                        <Route path="/pass" component={Pass} /> 
+                        <Route path="/singup" component={Singup} /> 
+                        <Route path="/login" component={Login} />
+                        <Route path="/name" component={Name} />
+                        <Route path="/referal" component={Referal} />
+                        <Route path="/create" component={Create} />
+
                     </Switch>
                     </>
                 </Right>

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import Dot from "../assets/images/Group 2608.svg";
-import Phone from "../assets/images/9180212681582004495.svg";
+import Phone from "../assets/images/Layer 3.svg";
+import Eye from "../assets/images/eye.svg";
 import {Link} from "react-router-dom";
 
 export default function Login() {
@@ -12,18 +13,17 @@ export default function Login() {
                     <Dotted src={Dot} alt="image" />
              </Round>
              <H2>
-                Let's root togrther and watch others grow
+                Create a Password for your account
              </H2>
-             <P>An inventive collaboration for smart dawn incling kids to match their vision</P>
              <Form>
-                 <Input type="number"  placeholder="Enter Phone Number" inputmode="numeric" required />
+                 <Input type="password"  placeholder="Enter New Password" required />
                  <Dial><Call src={Phone} alt="Icon" /></Dial>
-                 <P1>Forget Password?</P1>
-                 <Link to={`/pass`}>
-                    <Button type="submit" value="Continue" />
-                 </Link>
+                 <Hide><Hidden src={Eye} alt="Icon" /></Hide>
+                 <Inputt type="password"  placeholder="Confirm New Password" required />
+                 <Lock><Locked src={Phone} alt="Icon" /></Lock>
+                 <Conf><Confirm src={Eye} alt="Icon" /></Conf>
+                 <Link to={`/name`} > <Button type="submit" value="Continue" /> </Link>
              </Form>
-             <P2>New to steyp? <Link to={`/singup`} > <Span>Create Account</Span> </Link></P2>
         </Div>
         </>
     )
@@ -40,9 +40,9 @@ const Dotted = styled.img `
     display:block;
 `;
 const H2 = styled.h2 `
-    width: 80%;
     font-size: 28px;
     font-weight: 600;
+    margin-bottom: 50px;
 `;
 const P = styled.p `
     color:#707070;
@@ -57,19 +57,7 @@ const Input = styled.input `
     border:1px solid #707070;
     width:100%;
     border-radius:4px;
-    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
-        -webkit-appearance:none;
-        -moz-appearance:textfield;
-    }
-`;
-const P1 = styled.p `
-    text-align: end;
-    color: blue;
-    cursor:pointer;
-    margin-bottom:30px;
-    font-size: 18px;
-    font-weight: 600;
-    padding:10px;
+    margin-bottom: 60px;
 `;
 const Button = styled.input `
     width: 100%;
@@ -80,7 +68,6 @@ const Button = styled.input `
     border:none;
     color:#fff;
     border-radius:4px;
-}
 `;
 const P2 = styled.p `
     text-align:center;
@@ -102,4 +89,39 @@ const Dial = styled.div `
     top: 0;
     width: 9%;
     padding: 10px;   
+`;
+const Inputt = styled.input `
+    padding: 14px 45px;
+    border:1px solid #707070;
+    width:100%;
+    border-radius:4px;
+    margin-bottom: 60px;
+`;
+const Lock = styled.div `
+    position:absolute;
+    top: 109px;
+    width: 9%;
+    padding: 10px;   
+`;
+const Locked = styled.img `
+    width:100%;
+    display:block;
+`;
+const Hide = styled.div `
+    position:absolute;
+    top: 11px;
+    right: 4px;
+`;
+const Hidden = styled.img `
+     width:100%;
+     display: block;
+`;
+const Conf = styled.div `
+    position:absolute;
+    top: 121px;
+    right: 4px;
+`;
+const Confirm = styled.img `
+     width:100%;
+     display: block;
 `;

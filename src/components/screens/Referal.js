@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Dot from "../assets/images/Group 2608.svg";
-import Phone from "../assets/images/Layer 3.svg";
+import Phone from "../assets/images/coupon.svg";
 import {Link} from "react-router-dom";
 
 export default function Login() {
@@ -12,17 +12,15 @@ export default function Login() {
                     <Dotted src={Dot} alt="image" />
              </Round>
              <H2>
-                Enter Password
+                Enter a referral Code
              </H2>
-             <P>Enter your password to login</P>
+             <P>Please Enter your referal code given by your freind</P>
              <Form>
-                 <Input type="password"  placeholder="Enter Password" inputmode="numeric" required />
+                 <Input type="number"  placeholder="Enter Referal Code" inputmode="numeric" required />
                  <Dial><Call src={Phone} alt="Icon" /></Dial>
-                 <P1>Login with otp</P1>
-                 <Link to={`/otp`}>
-                    <Button type="submit" value="Submit" />
-                 </Link>
+                 <Link to={`/create`} > <Button type="submit" value="Continue" /> </Link>
              </Form>
+             <P2>Do you have Referal code ? <Link to={`/create`} >  <Span>Skip for now</Span> </Link></P2>
         </Div>
         </>
     )
@@ -46,29 +44,21 @@ const H2 = styled.h2 `
 const P = styled.p `
     color:#707070;
     font-size: 20px;
-    padding: 10px 0;
+    padding: 26px 0;
 `;
 const Form = styled.form `
     position:relative;
 `;
 const Input = styled.input `
     padding: 14px 45px;
-    border:1px solid;
+    border:1px solid #707070;
     width:100%;
     border-radius:4px;
+    margin-bottom: 60px;
     &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
         -webkit-appearance:none;
         -moz-appearance:textfield;
     }
-`;
-const P1 = styled.p `
-    text-align: end;
-    color: blue;
-    cursor:pointer;
-    margin-bottom:30px;
-    font-size: 18px;
-    font-weight: 600;
-    padding:10px;
 `;
 const Button = styled.input `
     width: 100%;
@@ -80,6 +70,17 @@ const Button = styled.input `
     color:#fff;
     border-radius:4px;
 `;
+const P2 = styled.p `
+    text-align:center;
+    font-size: 18px;
+    font-weight: 600;
+    padding:10px;
+    color:#707070;
+`;
+const Span = styled.span `
+    color:blue;
+    cursor:pointer;
+`;
 const Call = styled.img `
     width:100%;
     display:block;
@@ -87,6 +88,6 @@ const Call = styled.img `
 const Dial = styled.div `
     position:absolute;
     top: 0;
-    width: 9%;
-    padding: 10px;   
+    width: 13%;
+    padding: 18px;
 `;
