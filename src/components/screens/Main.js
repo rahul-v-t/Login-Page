@@ -29,8 +29,7 @@ export default function Main() {
                         <Route path="/login" component={Login} />
                         <Route path="/name" component={Name} />
                         <Route path="/referal" component={Referal} />
-                        <Route path="/create" component={Create} />
-
+                        <Route path="/create" component={Create} /> 
                     </Switch>
                     </>
                 </Right>

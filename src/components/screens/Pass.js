@@ -53,10 +53,8 @@ const Input = styled.input `
     border:1px solid #707070;
     width:100%;
     border-radius:4px;
-    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
-        -webkit-appearance:none;
-        -moz-appearance:textfield;
-    }
+    font-size:20px;
+    font-weight: 600;
 `;
 const P1 = styled.p `
     text-align: end;
@@ -83,7 +81,7 @@ const Call = styled.img `
 `;
 const Dial = styled.div `
     position:absolute;
-    top: 0;
+    top: 2px;
     width: 9%;
     padding: 10px;   
 `;
