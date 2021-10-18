@@ -3,9 +3,9 @@ import styled from "styled-components";
 import Dot from "../assets/images/Group 2608.svg";
 import Tick from "../assets/images/Group 2645.svg";
 import Cross from "../assets/images/Group 2938.svg";
+import Circle from "../assets/images/Group 5.svg";
 import Phone from "../assets/images/Layer 3.svg";
 import Eye from "../assets/images/eye.svg";
-import Circle from "../assets/images/Group 5.svg";
 import Noteye from "../assets/images/hide.svg";
 import {Link} from "react-router-dom";
 
@@ -70,7 +70,7 @@ export default function Login() {
                     <Dotted src={Dot} alt="image" />
              </Round>
              <H2>
-                Create a Password for your account
+             Password reset setup (3/3)
              </H2>
              <Form>
                  <Input  type={passwordShown ? "text" : "password"}  placeholder="Enter New Password" onChange={setFirst} required />
@@ -99,7 +99,7 @@ export default function Login() {
                         <Image   src ={specialChar ? Tick : Circle} /> Special Character {"*,&,%,$,# "}
                         </Lists>
                 </List>
-                 <Link to={`/login`} > <Button type="submit" value="Continue" /> </Link>
+                 <Link to={`/login`} > <Button type="submit" value="Reset" /> </Link>
              </Form>
              
         </Div>

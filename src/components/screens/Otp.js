@@ -88,7 +88,6 @@ const Button = styled.input `
     border:none;
     color:#fff;
     border-radius:4px;
-}
 `;
 const P2 = styled.p `
     text-align:center;

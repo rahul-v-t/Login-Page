@@ -12,18 +12,16 @@ export default function Login() {
                     <Dotted src={Dot} alt="image" />
              </Round>
              <H2>
-                Let's root togrther and watch others grow
+               Password reset setup (1/3)
              </H2>
-             <P>An inventive collaboration for smart dawn incling kids to match their vision</P>
+             <P>Enter your registered number to reset your password</P>
              <Form>
                  <Input type="number"  placeholder="Enter Phone Number" inputmode="numeric" required />
                  <Dial><Call src={Phone} alt="Icon" /></Dial>
-                 <Link to={`/forget`}><P1>Forget Password?</P1></Link>
-                 <Link to={`/pass`}>
-                    <Button type="submit" value="Continue" />
+                 <Link to={`/verify`}>
+                    <Button type="submit" value="Sent OTP" />
                  </Link>
              </Form>
-             <P2>New to steyp? <Link to={`/singup`} > <Span>Create Account</Span> </Link></P2>
         </Div>
         </>
     )
@@ -58,6 +56,7 @@ const Input = styled.input `
     width:100%;
     border-radius:4px;
     font-size:20px;
+    margin-bottom: 60px;
     &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
         -webkit-appearance:none;
         -moz-appearance: textfield;
