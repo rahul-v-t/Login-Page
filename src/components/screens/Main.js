@@ -9,6 +9,7 @@ import Name from './Name';
 import Referal from './Referal';
 import Pass from './Pass';
 import Create from './Create';
+import Otp from './Otp';
 
 export default function Main() {
     return (
@@ -30,6 +31,7 @@ export default function Main() {
                         <Route path="/name" component={Name} />
                         <Route path="/referal" component={Referal} />
                         <Route path="/create" component={Create} /> 
+                        <Route path="/otp" component={Otp} /> 
                     </Switch>
                     </>
                 </Right>

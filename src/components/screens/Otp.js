@@ -5,6 +5,15 @@ import Phone from "../assets/images/9180212681582004495.svg";
 import {Link} from "react-router-dom";
 
 export default function Login() {
+    const [counter, setCounter] = React.useState(29);
+    React.useEffect(() => {
+        const timer =
+        counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
+        return () => clearInterval(timer);
+    }, [counter]);
+    const resendOtp = () =>{
+        setCounter(29);
+    }
     return (
         <>
         <Div>
@@ -12,18 +21,16 @@ export default function Login() {
                     <Dotted src={Dot} alt="image" />
              </Round>
              <H2>
-                Let's root togrther and watch others grow
+                Enter  OTP send to your number
              </H2>
-             <P>An inventive collaboration for smart dawn incling kids to match their vision</P>
+             <P>Recovery code was sent to your phone number. Please enter the code</P>
              <Form>
-                 <Input type="number"  placeholder="Enter Phone Number" inputmode="numeric" required />
+                 <Input type="number"  placeholder="Enter OTP" inputmode="numeric" required />
                  <Dial><Call src={Phone} alt="Icon" /></Dial>
-                 <Link to={``}><P1>Forget Password?</P1></Link>
-                 <Link to={`/pass`}>
+                 <P1 onClick={counter==0 ? resendOtp : "" } counter={counter} > Resend OTP  <Resent style={{fontWeight:"bold"}} counter={counter} > in 00:{counter}</Resent> </P1>
                     <Button type="submit" value="Continue" />
-                 </Link>
              </Form>
-             <P2>New to steyp? <Link to={`/singup`} > <Span>Create Account</Span> </Link></P2>
+             <P2><Link to={`/pass`} > <Span>Login with Password</Span> </Link></P2>
         </Div>
         </>
     )
@@ -40,7 +47,7 @@ const Dotted = styled.img `
     display:block;
 `;
 const H2 = styled.h2 `
-    width: 80%;
+    width: 85%;
     font-size: 28px;
     font-weight: 600;
 `;
@@ -65,12 +72,12 @@ const Input = styled.input `
 `;
 const P1 = styled.p `
     text-align: end;
-    color: blue;
     cursor:pointer;
     margin-bottom:30px;
     font-size: 18px;
     font-weight: 600;
     padding:10px;
+    color: ${({counter})=>(counter==0 ? 'red' :'#707070')};
 `;
 const Button = styled.input `
     width: 100%;
@@ -103,4 +110,7 @@ const Dial = styled.div `
     top: 2px;
     width: 9%;
     padding: 10px;   
+`;
+const Resent = styled.span `
+    display: ${({counter})=>(counter==0 ? 'none' :'inline-block')};  
 `;

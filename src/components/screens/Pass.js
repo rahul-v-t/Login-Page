@@ -2,6 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import Dot from "../assets/images/Group 2608.svg";
 import Phone from "../assets/images/Layer 3.svg";
+import {Link} from "react-router-dom";
+
 
 export default function Login() {
     return (
@@ -17,7 +19,7 @@ export default function Login() {
              <Form>
                  <Input type="password"  placeholder="Enter Password" inputmode="numeric" required />
                  <Dial><Call src={Phone} alt="Icon" /></Dial>
-                 <P1>Login with otp</P1>
+                 <Link to={`/otp`}><P1>Login with otp</P1></Link>
                     <Button type="submit" value="Submit" />
              </Form>
         </Div>
